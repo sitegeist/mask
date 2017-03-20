@@ -16,7 +16,7 @@ $storageRepository = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('MASK\
 $configuration = $storageRepository->load();
 
 if (!empty($configuration) && array_key_exists('tt_content', $configuration)) {
-s	   $tcaCodeGenerator = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('MASK\\Mask\\CodeGenerator\\TcaCodeGenerator');
+	   $tcaCodeGenerator = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('MASK\\Mask\\CodeGenerator\\TcaCodeGenerator');
 
 	   // Generate TCA for Content-Elements
 	   $contentColumns = $tcaCodeGenerator->generateFieldsTca($configuration["tt_content"]["tca"]);
